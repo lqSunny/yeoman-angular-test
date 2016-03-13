@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 var MyApp = angular.module('AngularApp', [
-    'ngAnimate',
+    //'ngAnimate',
     'ngRoute'
 
   ])

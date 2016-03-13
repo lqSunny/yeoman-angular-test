@@ -1,0 +1,22 @@
+/* line 2, ../sass/todo.scss */
+header h1 {
+  text-align: center;
+}
+/* line 4, ../sass/todo.scss */
+header h1 span.label {
+  vertical-align: middle;
+  font-size: 25%;
+}
+
+/* line 12, ../sass/todo.scss */
+.panel .table td:first-child {
+  width: 50%;
+}
+/* line 15, ../sass/todo.scss */
+.panel .table td:nth-child(2) {
+  width: 20%;
+}
+/* line 18, ../sass/todo.scss */
+.panel .table td:nth-child(3) {
+  width: 30%;
+}

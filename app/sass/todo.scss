@@ -1,0 +1,22 @@
+header {
+  h1{
+    text-align: center;
+    span.label {
+      vertical-align: middle;
+      font-size: 25%;
+    }
+  }
+}
+.panel {
+  .table {
+    td:first-child {
+      width: 50%;
+    }
+    td:nth-child(2) {
+      width: 20%;
+    }
+    td:nth-child(3) {
+      width: 30%;
+    }
+  }
+}

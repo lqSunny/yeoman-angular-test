@@ -1,0 +1,26 @@
+[
+  {
+    "action": "6买花",
+    "done": false
+  },
+  {
+    "action": "1买鞋",
+    "done": false
+  },
+  {
+    "action": "2买衣服",
+    "done": false
+  },
+  {
+    "action": "4买手纸",
+    "done": true
+  },
+  {
+    "action": "5洗碗",
+    "done": true
+  },
+  {
+    "action": "3擦地",
+    "done": false
+  }
+]
