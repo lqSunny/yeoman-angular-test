@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="sportsStore">
+<head>
+    <meta charset="UTF-8">
+    <title>运动商店</title>
+    <link rel="stylesheet" href="../libs/bootstrap-sass-official/assets/dist/css/bootstrap.css" >
+    <script src="../libs/angular/angular.js"></script>
+    <script src="scripts/controllers/sportsStore.js"></script>
+    <script src="scripts/filters/customFilters.js"></script>
+    <script src="scripts/controllers/productListControllers.js"></script>
+</head>
+<body ng-controller="sportsStoreCtrl">
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">运动商店</a>
+    </div>
+    <div class="panel panel-defalt row" ng-controller="productListCtrl">
+        <div class="col-xs-3">
+            <a ng-click="selectCategory()" class="btn btn-block btn-default btn-lg">全部</a>
+            <a ng-click="selectCategory(item)" ng-repeat="item in data.products | orderBy: 'category' | unique: 'category'" class="btn btn-block btn-default btn-lg">{{item}}</a>
+        </div>
+        <div class="col-xs-8">
+            <div class="well" ng-repeat="item in data.products | filter: categoryFilterFn">
+                <h3>
+                    <strong>{{item.name}}</strong>
+                    <span class="pull-right label label-primary">
+                        {{item.price | currency}}
+                    </span>
+                </h3>
+                <span class="lead">{{item.description}}</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -50,4 +50,36 @@ todoApp.controller('todoCtrl' , function($scope){
 
 });
 
+/* test javascript */
+var testObj = {
+  name: 'liqing',
+  age: 26,
+  love: function(){
+    console.log('i love hahaha');
+  }
+};
+var testArr = [
+  {
+    id: '11',
+    title: '李女士低'
+  },
+  {
+    id: '22',
+    title: 'v 的事'
+  }
+];
+//delete关键字删除对象的属性或方法
+delete testObj.love;
+//in表达式查看对象是否拥有某属性
+console.log('name' in testObj); //true
+console.log('love' in testObj); //false
+for(i in testObj){
+  console.log(i + '--' + testObj[i]);
+}
+console.log('----------------------------');
+for(i in testArr){
+  console.log(i + '--' + testArr[i].title);
+}
+
+
 
