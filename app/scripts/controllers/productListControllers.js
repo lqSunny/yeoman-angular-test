@@ -4,7 +4,7 @@
 angular.module('sportsStore')
   .constant('productListActiveClass', 'btn-primary') //定义常量 高亮的颜色 bootstrap类
   .constant('productListPageCount', 3) //定义常量 每页显示的记录数
-  .controller('productListCtrl', function ($scope, $filter, productListActiveClass, productListPageCount) {
+  .controller('productListCtrl', function ($scope, $filter, productListActiveClass, productListPageCount, cart) {
     var selectedCategory = null; //已选的类型
 
     $scope.selectedPage = 1; //当前页
@@ -30,5 +30,9 @@ angular.module('sportsStore')
     $scope.getPageClass = function(page){
       return $scope.selectedPage == page? productListActiveClass: '';
     };
+
+    $scope.addProductToCart = function(product){
+      cart.addProduct(product.id, product.name, product.price);
+    }
 
   });
